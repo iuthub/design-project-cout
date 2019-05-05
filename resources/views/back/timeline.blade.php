@@ -7,6 +7,7 @@
 <section class="head">
     <div class="container-fluid">
         <div class="col-lg-12">
+            @include('includes.message-block')
             <div class="row">
                 <div class="col-lg-4">
 
@@ -70,10 +71,11 @@
                         <header>
                             <i class="fa fa-edit"></i> Create post
                         </header>
-                        <form action="#" method="post" class="form-group">
-                            <textarea rows="5" class="form-control" placeholder="What's in your mind?"></textarea>
+                        <form action="{{route('post.create')}}" method="post" class="form-group">
+                            <textarea rows="5" name="body" class="form-control" placeholder="What's in your mind?"></textarea>
                             <div class="post-footer">
                                 <button class="btn btn-primary new-post-button">Post</button>
+                                <input type="hidden" value="{{Session::token()}}" name="_token" >
                             </div>
                         </form>
                     </div>

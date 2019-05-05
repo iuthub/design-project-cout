@@ -17,4 +17,3 @@
         {{Session::get('err')}}
     </div>
 @endif
-
