@@ -8,6 +8,10 @@ body{
 	color: #fff;
 }
 
+.p-l-0
+{
+	padding-left: 0;
+}
 a{
 	text-decoration: none;
 }
@@ -668,13 +672,13 @@ p.copyright{
 	padding: 20px;
 }
 
-.section-sign a{
+.section-sign a.link{
 	display: block;
 	text-decoration: none;
 	color: #FF5E3A;
 }
 
-.section-sign a:hover{
+.section-sign a.link:hover{
 	text-decoration: underline;
 }
 
@@ -876,7 +880,7 @@ p.copyright{
 		margin: 90px 0;
 	}
 
-	.section-sign a{
+	.section-sign a.link{
 		display: block;
 		padding: 0 !important;
 	}

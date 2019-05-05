@@ -18,19 +18,18 @@ Route::get('/', function () {
 
 Route::post('/signup', [
    'uses' => 'UserController@postSignUp',
-    'as' => 'baby'
+    'as' => 'signup'
 ]);
 
-
-Route::get('/dashboard', [
-    'uses' => 'PostController@getDashboard',
-    'as' => 'dashboard',
-    'middleware' => 'auth'
-]);
 
 Route::post('/signin', [
    'uses' => 'UserController@postSignIn',
    'as' => 'signin'
+]);
+
+Route::get('/user/verify/{token}', [
+    'uses' => 'UserController@verifyUser',
+    'as' => 'verifyUser'
 ]);
 
 Route::post('/createpost',[
