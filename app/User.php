@@ -18,4 +18,8 @@ class User extends Model implements Authenticatable
         return $this->hasOne('App\VerifyUser');
     }
 
+    public function likes(){
+        return $this->hasMany('App\Like');
+    }
+
 }

@@ -25,7 +25,7 @@
             <li class="nav-item dropdown no-arrow right">
                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <span class="d-none d-lg-inline small">{{Auth::user()->first_name}}</span>
-                    <img class="img-profile rounded-circle" src="https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-1/p160x160/41684578_2094736747509295_6358971459963977728_n.jpg?_nc_cat=107&_nc_ht=scontent.fhen1-1.fna&oh=4ecc33d9284a761c76ed6a3580659b08&oe=5D64F6FA">
+                    <img class="img-profile rounded-circle" src="img/user.png">
                 </a>
                 <!-- Dropdown - User Information -->
                 <div class="dropdown-menu dropdown-menu-right">

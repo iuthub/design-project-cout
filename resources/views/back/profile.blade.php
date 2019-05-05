@@ -6,6 +6,7 @@
     <section class="head">
         <div class="container-fluid">
             <div class="col-lg-12">
+                @include('includes.message-block')
                 <a href="#">
                     <img class="cover" src="https://html.crumina.net/html-olympus/img/top-header1.jpg">
                 </a>
@@ -147,146 +148,63 @@
                             <header>
                                 <i class="fa fa-edit"></i> Create post
                             </header>
-                            <form action="#" method="post" class="form-group">
-                                <textarea rows="5" class="form-control" placeholder="What's in your mind?"></textarea>
+                            <form action="{{route('post.create')}}" method="post" class="form-group">
+                                <textarea rows="5" name="body" class="form-control" placeholder="What's in your mind?"></textarea>
                                 <div class="post-footer">
                                     <button class="btn btn-primary new-post-button">Post</button>
+                                    <input type="hidden" value="{{Session::token()}}" name="_token" >
                                 </div>
                             </form>
                         </div>
+                        @foreach($posts as $post)
+                        <div class="post" data-aos="fade-up">
+                            <div class="post-header">
+                                <img src="img/user.png" class="post-author-img">
+                                <div class="post-author-name">
+                                    <a href="#">{{$post->user->first_name}} {{$post->user->last_name}}</a>
+                                    <br> <span class="post-date">{{$post->created_at}}</span>
+                                </div>
+                            </div>
+                            <div class="post-content">
+                                {{$post->body}}
+                                <input type="hidden" value="{{$post->id}}" class="pid">
+                            </div>
+                            <div class="post-footer">
+                                <div class="post-buttons">
+                                    <ul class="buttons">
+                                        <li class="item like-action"><a href="#" id="like"><i class="fa fa-thumbs-up"></i>  likes</a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        @endforeach
                         <div class="post" data-aos="fade-up">
                             <div class="post-header">
                                 <img src="https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-1/p160x160/41684578_2094736747509295_6358971459963977728_n.jpg?_nc_cat=107&_nc_ht=scontent.fhen1-1.fna&oh=4ecc33d9284a761c76ed6a3580659b08&oe=5D64F6FA" class="post-author-img">
                                 <div class="post-author-name">
-                                    <a href="#">Yorkinov Mukhammadjon</a>
-                                    <br> <span class="post-date">01 Jan</span>
+                                    <a href="#">{{$post->user->first_name}} {{$post->user->last_name}}</a>
                                 </div>
                             </div>
                             <div class="post-content">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                <h5><b>Born on {{Auth::user()->birthday}}</b></h5>
                             </div>
                             <div class="post-footer">
                                 <div class="post-buttons">
                                     <ul class="buttons">
                                         <li class="item"><a href="#" id="like"><i class="fa fa-thumbs-up"></i> 1,589 likes</a></li>
-                                        <li class="item"><a href="#" id="like"><i class="fa fa-comment"></i> 2510 comments</a></li>
-                                        <li class="item"><a href="#" id="like"><i class="fa fa-share"></i> Share</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        <div class="post" data-aos="fade-up">
-                            <div class="post-header">
-                                <img src="https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-1/p160x160/41684578_2094736747509295_6358971459963977728_n.jpg?_nc_cat=107&_nc_ht=scontent.fhen1-1.fna&oh=4ecc33d9284a761c76ed6a3580659b08&oe=5D64F6FA" class="post-author-img">
-                                <div class="post-author-name">
-                                    <a href="#">Yorkinov Mukhammadjon</a>
-                                    <br> <span class="post-date">01 Jan</span>
-                                </div>
-                            </div>
-                            <div class="post-content">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </div>
-                            <div class="post-footer">
-                                <div class="post-buttons">
-                                    <ul class="buttons">
-                                        <li class="item"><a href="#" id="like"><i class="fa fa-thumbs-up"></i> 1,589 likes</a></li>
-                                        <li class="item"><a href="#" id="like"><i class="fa fa-comment"></i> 2510 comments</a></li>
-                                        <li class="item"><a href="#" id="like"><i class="fa fa-share"></i> Share</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="post" data-aos="fade-up">
-                            <div class="post-header">
-                                <img src="https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-1/p160x160/41684578_2094736747509295_6358971459963977728_n.jpg?_nc_cat=107&_nc_ht=scontent.fhen1-1.fna&oh=4ecc33d9284a761c76ed6a3580659b08&oe=5D64F6FA" class="post-author-img">
-                                <div class="post-author-name">
-                                    <a href="#">Yorkinov Mukhammadjon</a>
-                                    <br> <span class="post-date">01 Jan</span>
-                                </div>
-                            </div>
-                            <div class="post-content">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </div>
-                            <div class="post-footer">
-                                <div class="post-buttons">
-                                    <ul class="buttons">
-                                        <li class="item"><a href="#" id="like"><i class="fa fa-thumbs-up"></i> 1,589 likes</a></li>
-                                        <li class="item"><a href="#" id="like"><i class="fa fa-comment"></i> 2510 comments</a></li>
-                                        <li class="item"><a href="#" id="like"><i class="fa fa-share"></i> Share</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="post" data-aos="fade-up">
-                            <div class="post-header">
-                                <img src="https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-1/p160x160/41684578_2094736747509295_6358971459963977728_n.jpg?_nc_cat=107&_nc_ht=scontent.fhen1-1.fna&oh=4ecc33d9284a761c76ed6a3580659b08&oe=5D64F6FA" class="post-author-img">
-                                <div class="post-author-name">
-                                    <a href="#">Yorkinov Mukhammadjon</a>
-                                    <br> <span class="post-date">01 Jan</span>
-                                </div>
-                            </div>
-                            <div class="post-content">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </div>
-                            <div class="post-footer">
-                                <div class="post-buttons">
-                                    <ul class="buttons">
-                                        <li class="item"><a href="#" id="like"><i class="fa fa-thumbs-up"></i> 1,589 likes</a></li>
-                                        <li class="item"><a href="#" id="like"><i class="fa fa-comment"></i> 2510 comments</a></li>
-                                        <li class="item"><a href="#" id="like"><i class="fa fa-share"></i> Share</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="post" data-aos="fade-up">
-                            <div class="post-header">
-                                <img src="https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-1/p160x160/41684578_2094736747509295_6358971459963977728_n.jpg?_nc_cat=107&_nc_ht=scontent.fhen1-1.fna&oh=4ecc33d9284a761c76ed6a3580659b08&oe=5D64F6FA" class="post-author-img">
-                                <div class="post-author-name">
-                                    <a href="#">Yorkinov Mukhammadjon</a>
-                                    <br> <span class="post-date">01 Jan</span>
-                                </div>
-                            </div>
-                            <div class="post-content">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </div>
-                            <div class="post-footer">
-                                <div class="post-buttons">
-                                    <ul class="buttons">
-                                        <li class="item"><a href="#" id="like"><i class="fa fa-thumbs-up"></i> 1,589 likes</a></li>
-                                        <li class="item"><a href="#" id="like"><i class="fa fa-comment"></i> 2510 comments</a></li>
-                                        <li class="item"><a href="#" id="like"><i class="fa fa-share"></i> Share</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <script>
+        var _token = '{{Session::token()}}';
+        var urlLike = '{{route('like')}}';
+    </script>
 @endsection

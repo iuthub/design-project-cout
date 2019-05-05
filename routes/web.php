@@ -48,6 +48,10 @@ Route::get('/logout',[
     'as' => 'logout'
 ]);
 
+Route::post('/like', [
+    'uses' => 'PostController@postLikePost',
+    'as' => 'like'
+]);
 
 /************Begin Work/****************/
 
