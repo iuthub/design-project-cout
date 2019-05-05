@@ -1,0 +1,906 @@
+body{
+	background: #EDF2F6;
+	font-family: 'Barlow', sans-serif;
+}
+
+*::selection{
+	background-color: #3F4257;
+	color: #fff;
+}
+
+a{
+	text-decoration: none;
+}
+/********** COUT.UZ ********** Bobobek Turdiev **********/
+.row{
+	margin: 0;
+	padding: 0;
+}
+
+.navbar{
+	position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 21;
+}
+
+nav.bg-dark{
+	background: #3F4257 !important;
+	color: #ffffff !important;
+
+}
+
+.logo{
+	display: inline-block;
+	vertical-align: inherit;
+	position: relative;
+	z-index: 10;
+	margin-left: 50px;
+}
+
+.logo img{
+	width: 40px;
+	height: 40px;
+}
+/********** COUT.UZ ********** Bobobek Turdiev **********/
+li.nav-item{
+	display: inline;
+	margin-left: 35px;
+}
+
+
+a.nav-link{
+	color: #ffffff;
+}
+
+a.active{
+	color: #FF5E3A;
+}
+
+.a-fx::after{
+	content: '';
+	display: block;
+	width: 0;
+	height: 2px;
+	background: #FF5E3A;
+	transition: width .5s;
+}
+
+.a-fx:hover::after{
+	width: 100%;
+	transition: width .3s;
+}
+
+a.nav-link:hover{
+	color: #FF5E3A;
+	transition:  .8s;
+
+}
+
+section.head{
+	margin-top: 85px;
+}
+
+.navbar-toggler{
+	color: #ffffff;
+	font-size: 20px;
+	padding-top: 10px;
+}
+
+.img-profile{
+	width: 35px;
+	height: 35px;
+}
+/********** COUT.UZ ********** Bobobek Turdiev **********/
+ul.menu-profile{
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+img.cover{
+	width: 100%	;
+	height: 450px;
+	object-fit: cover;
+	border-radius: 10px 10px 0 0;
+	display: block;
+	border: 0 1px 0 1px solid #eee;
+}
+
+.border{
+	border: 1px solid red !important;
+}
+
+.profile-menu{
+	background: #fff;
+	border: 1px solid #eee;
+	border-radius: 0 0 10px 10px;
+	padding: 0 !important;
+}
+
+p.profile-name{
+	font-weight: bold;
+	text-transform: capitalize;
+	color: #515365;
+	padding-top: 15px;
+
+}
+/********** COUT.UZ ********** Bobobek Turdiev **********/
+.p0{
+	padding: 0 !important;
+}
+
+.m0{
+	margin: 0 !important;
+}
+
+.profile-menu-list{
+	list-style: none;
+	padding: 30px !important;
+	margin: 0 !important;
+	justify-content: space-around;
+	display: flex;
+}
+
+.profile-menu-list li{
+	display: inline-block;
+}
+
+
+.profile-menu-list li a{
+	color: #9A9FBF;
+}
+/********** COUT.UZ ********** Bobobek Turdiev **********/
+.profile-menu-list .active{
+	color: #515365;
+}
+
+.profile-menu-list li a:hover{
+	color: #515365;
+	text-decoration: none;
+	transition:  .8s;
+}
+
+.profile-menu-list li a::after{
+	content: '';
+	display: block;
+	width: 0;
+	height: 2px;
+	background: #515365;
+	transition: width .5s;
+}
+
+.profile-menu-list li a:hover::after{
+	width: 100%;
+}
+/********** COUT.UZ ********** Bobobek Turdiev **********/
+.profile-img-block{
+	position: absolute;
+  	transform: translate(-50%,0);
+  	left: 50%;
+  	text-align: center;
+  	bottom: 25px;
+}
+
+.profile-img{
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	border: 10px solid #ffffff;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	display: block;
+	margin: auto;
+}
+
+.block{
+	display: block;
+}
+
+/************POST STYLES*****************/
+
+.post{
+	background-color: #ffffff;
+	margin-top: 20px;
+	border-radius: 3px;
+	padding: 20px;
+}
+/********** COUT.UZ ********** Bobobek Turdiev **********/
+.post-header{
+	overflow: hidden;
+}
+
+.post-author-img{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	display: block;
+	float: left;
+}
+
+.post-header a{
+	text-decoration: none;
+	color: #515365;
+	font-weight: bold;
+}
+
+.post-header a:hover{
+	text-decoration: none;
+	color: #FF5E3A;
+	transition: 0.5s ease-out;
+}
+/********** COUT.UZ ********** Bobobek Turdiev **********/
+
+.post-author-name{
+	margin-left: 10px;
+	float: left;
+}
+
+.post-date{
+	font-size: 12px;
+}
+
+.post-content{
+	margin: 25px 0;
+	color: #888DA8;
+}
+
+
+
+.post-footer{
+	border-top: 1px solid #ddd;
+	margin: 10px 0px;
+	padding: 10px 0px 0 0;
+}
+
+.post-buttons ul.buttons{
+	list-style: none;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+/********** COUT.UZ ********** Bobobek Turdiev **********/
+.post-buttons ul.buttons li.item{
+	display: inline;
+	padding-left: 15px;
+}
+
+.post-buttons ul.buttons li.item:first-child{
+	padding-left: 0;
+}
+
+.post-buttons ul.buttons li.item a{
+	color: #FF5E3A;
+}
+
+/************END POST STYLES*****************/
+
+/************Widget Styles*******************/
+
+.widget{
+	background-color: #ffffff;
+	margin-top: 50px;
+	border-radius: 3px;
+}
+
+.widget:first-child{
+	margin-top: 20px;
+}
+
+.widget h4{
+	display: block;
+	background: #3F4257;
+	border-left: 10px solid #F95E3A;
+	padding: 10px;
+	font-size: 18px;
+	color: #fff;
+}
+
+.widget-content ul.list{
+	list-style: none;
+	padding: 20px !important;
+}
+/********** COUT.UZ ********** Bobobek Turdiev **********/
+.widget-content ul.friend-list{
+	list-style: none;
+	padding: 20px !important;
+}
+
+.widget-content ul.friend-list li{
+	display: inline;
+	padding: 8px 0 0 8px;
+}
+
+.widget-content ul.friend-list li a{
+	text-decoration: none;
+	opacity: 0.7;
+}
+
+.widget-content ul.friend-list li a:hover{
+	opacity: 1;
+	transition: all 0.7s;
+}
+
+img.friend-img{
+	width: 50px;
+	height: 50px;
+	object-fit: cover;
+	border-radius: 50%;
+	display: inline-block;
+}
+/********** COUT.UZ ********** Bobobek Turdiev **********/
+.widget-content ul.gallery-widget{
+	list-style: none;
+	padding: 20px !important;
+}
+
+.widget-content ul.gallery-widget li{
+	display: inline-block;
+	padding: 8px 0 0 8px;
+}
+
+.widget-content ul.gallery-widget li a{
+	text-decoration: none;
+}
+
+.widget-content ul.gallery-widget li a:hover{
+	text-decoration: none;
+}
+
+img.gallery-widget{
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+}
+/********** COUT.UZ ********** Bobobek Turdiev **********/
+.widget-content  img.ad{
+	max-height: 350px;
+	object-fit: cover;
+}
+
+.widget-user{
+	list-style: none;
+	padding: 0!important;
+	margin: 0 !important;
+	overflow: hidden;
+}
+
+.widget-user li{
+	border-top: 1px solid #ddd;
+	padding: 10px!important;
+}
+
+.widget-user li:first-child{
+	border-top: 0px solid #ddd;
+}
+
+.widget-user img{
+	max-width: 60px;
+	border-radius: 50%;
+	display: block;
+	margin: auto;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	border: 1px solid #eee;
+}
+/********** COUT.UZ ********** Bobobek Turdiev **********/
+.widget-user i{
+	color: #fff;
+}
+
+.widget-user a.friend-name{
+	display: inline-block;
+	padding-left: 5px;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	text-decoration: none;
+	color: #515365;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.widget-user a.friend-name:hover{
+	color: #FF5E3A;
+	transition: all .5s ease-out;
+}
+
+.widget-user a.friend-request{
+	display: inline-block;
+    vertical-align: middle;
+	position: relative;
+	float: right;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.widget-user a.friend-request:hover{
+	cursor: pointer;
+}
+
+button.load-more{
+	display: block;
+	margin: 25px auto !important;
+}
+
+p.notification{
+	display: inline-block;
+    vertical-align: middle;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+p.notification a{
+	color: #3F4257;
+	font-weight: bolder;
+}
+
+li.notification:nth-child(even){
+	background-color: #F2F2F2; 
+}
+
+/************End Widget Styles*******************/
+
+
+footer{
+	background:#292C38;
+	color: #ffffff;
+	margin-top: 50px;
+	padding: 20px;
+}
+/********** COUT.UZ ********** Bobobek Turdiev **********/
+footer ul.quick-links{
+	list-style: none;
+	padding: 0 !important;
+	display: flex;
+	justify-content: space-around;
+}
+
+footer ul.quick-links li{
+	display: inline;
+}
+
+footer ul.quick-links li a{
+	color: #fff;
+	text-decoration: none;
+}
+
+p.copyright{
+	text-align: right;
+}
+
+.right{
+	float: right !important;
+}
+
+.widget:last-child{
+  position: -webkit-sticky;
+	position: sticky;
+	top: 5rem;
+    
+}
+
+.card{
+	background-color: #ffffff;
+	margin-top: 20px;
+	border-radius: 3px;
+	border: 0px;
+}
+
+.card header{
+	background: #3F4257;
+	border-left: 10px solid #F95E3A;
+	padding: 15px !important;
+	color: #ffffff;
+}
+
+.card textarea{
+	border: 0px solid red;
+	resize: none; 
+	max-height: 200px;
+	min-height: 100px;
+}
+
+.card input.search{
+	border: 0px solid red;
+	background-color: #3F4257;
+	color: #ffffff;
+}
+
+.new-post-button{
+	margin: 15px;
+	float: right;
+}
+
+.btn-primary{
+	background-color: #FF5E3A;
+	border: 0px;
+}
+
+.btn-primary:hover, 
+.btn-primary:focus, 
+.btn-primary:active,
+.btn-primary:visited {
+	background-color: #F22B00;
+	border: 0px;
+}
+
+
+/*********************Search Page **********************/
+
+.btn-search {
+	color: #fff;
+}
+
+.btn-search:hover, 
+.btn-search:focus, 
+.btn-search:active,
+.btn-search:visited{
+	color: #eee;
+}
+
+
+/*************************LANDING PAGE***********************/
+
+.header-section{
+	background: url(../img/back.jpg);
+	width: 100%;
+	height: 550px;
+	background-size: cover;
+    background-position: center center;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    z-index: -10;
+}
+
+.overlay{
+    background-color: #000; 
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+    opacity: 0.7;
+
+}
+
+.welcome-block{
+	text-align: center;
+	color: #fff;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	line-height: 35px;
+}
+
+.welcome-block h2{
+	font-size: 36px;
+}
+
+.welcome-block p{
+	font-size: 20px;
+	font-weight: 60;
+}
+
+.features{
+	margin: 50px 100px;
+}
+.f-block{
+	padding: 30px;
+}
+.f-block-header{
+	text-transform: capitalize;
+	font-size: 24px;
+	color: #3F4257;
+	border-bottom: 1px solid #FF5E3A;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+
+.f-block-header i{
+	padding-right: 10px;
+	color: #FF5E3A;
+}
+
+.f-block-content{
+	color: #828282;
+}
+
+.info-content{
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.info-content .card{
+	border-radius: 0;
+	padding: 0 100px;
+	margin: 0 !important;
+}
+
+.info-content img{
+	width: 100%;
+	padding: 35px 0 20px 0;
+
+}
+
+.info-content-header{
+	padding: 35px 0 20px 0;
+}
+
+
+.info-content-header h2{
+	font-weight: bold;
+	color: #3F4257
+}
+
+.info-content-content{
+	font-size: 20px;
+	line-height: 40px;
+	color: #828282;
+}
+
+
+.home-sign-block
+{
+	background-color: #FF5E3A;
+	padding: 50px 100px;
+	color: #fff;
+}
+
+.home-sign-block .btn-outline-primary{
+	color: #fff;
+	border-color: #fff;
+	padding: 0.6rem 2rem;
+}
+
+.home-sign-block .btn-outline-primary:hover{
+	background-color: #fff;
+	color: #3F4257;
+}
+
+.section-sign{
+	margin: 130px 0;
+}
+
+.section-sign .card{
+	padding: 20px;
+}
+
+.section-sign a{
+	display: block;
+	text-decoration: none;
+	color: #FF5E3A;
+}
+
+.section-sign a:hover{
+	text-decoration: underline;
+}
+
+
+.section-sign button{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+
+/**************Preloader**********/
+
+#load-screen{
+	opacity: 1;
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: #262626;
+}
+#loader
+{
+	position: absolute;
+	z-index: 99999;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(45deg);
+	width: 100px;
+	height: 100px;
+	animation: animate 1s linear infinite;
+}
+#loader span
+{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background: #f00;
+	animation: rotate 1s linear infinite;
+}
+#loader span:nth-child(1)
+{
+	top: 0;
+	left: 0;
+	background: #f79f1f;
+}
+#loader span:nth-child(2)
+{
+	top: 0;
+	right: 0;
+	background: #12cbc4;
+}
+#loader span:nth-child(3)
+{
+	bottom: 0;
+	left: 0;
+	background: #ed4c67;
+}
+#loader span:nth-child(4)
+{
+	bottom: 0;
+	right: 0;
+	background: #a3cb38;
+}
+@keyframes animate
+{
+	0%
+	{
+		width: 100px;
+		height: 100px;
+	}
+	10%
+	{
+		width: 100px;
+		height: 100px;
+	}
+	50%
+	{
+		width: 150px;
+		height: 150px;
+	}
+	90%
+	{
+		width: 100px;
+		height: 100px;
+	}
+	100%
+	{
+		width: 100px;
+		height: 100px;
+	}
+}
+
+@keyframes rotate
+{
+	0%
+	{
+		transform: rotate(0deg);
+	}
+	10%
+	{
+		transform: rotate(0deg);
+	}
+	60%
+	{
+		transform: rotate(90deg);
+	}
+	90%
+	{
+		transform: rotate(90deg);
+	}
+	100%
+	{
+		transform: rotate(90deg);
+	}
+}
+
+
+/**************************MEDIA Queries********************/
+
+@media (max-width: 992px) and (min-width: 215px){
+
+	.menu-name{
+		display: none;
+	}
+
+	.navbar-nav{
+		flex-direction: row;
+		padding: 0 !important;
+		margin: 0 !important;
+	}
+
+	li.nav-item{
+		display: inline;
+		padding-left: 55px;
+		font-size: 24px;
+		margin: 0;
+	}
+
+	.profile-menu{
+		background: #fff;
+		border: 1px solid #eee;
+		border-radius: 0 0 10px 10px;
+		padding: 0 0 20px 0 !important;
+	}
+
+/********** COUT.UZ ********** Bobobek Turdiev **********/
+	.profile-img-block{
+		position: relative;
+  	transform: translate(-50%, 0%);
+  	left: 50%;
+  	text-align: center;
+  	bottom: 0px;
+	  	text-align: center;
+	}
+
+	img.cover{
+		width: 100%	;
+		height: 220px;
+		object-fit: cover;
+		border-radius: 10px 10px 0 0;
+		display: block;
+		border: 0 1px 0 1px solid #eee;
+	}
+
+	img.gallery-widget{
+		width: 90px;
+		height: 90px;
+		object-fit: cover;
+	}
+
+	p.copyright{
+		padding-top: 15px;
+		text-align: center;
+	}
+
+	.header-section{
+		height: 450px;
+	}
+
+	.features{
+		margin: 25px 25px;
+	}
+
+
+	.info-content-content{
+		font-size: 18px;
+		line-height: 36px;
+		color: #828282;
+	}
+
+	.home-sign-block .btn-outline-primary{
+		margin-top: 20px;
+
+	}
+
+	.section-sign{
+		margin: 90px 0;
+	}
+
+	.section-sign a{
+		display: block;
+		padding: 0 !important;
+	}
+
+}
+/********** COUT.UZ ********** Bobobek Turdiev **********/
+@media (max-width: 678px){
+	li.nav-item{
+		display: inline;
+		padding-left: 35px;
+		font-size: 24px;
+		margin: 0;
+	}
+}
+
+@media (max-width: 215px){
+	li.nav-item{
+		padding-left: 0;
+	}
+
+}
+
+
+@media (min-width: 992px){
+	
+}
+/********** COUT.UZ ********** Bobobek Turdiev **********/

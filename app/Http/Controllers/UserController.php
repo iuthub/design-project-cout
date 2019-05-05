@@ -45,7 +45,7 @@ class UserController extends Controller
         ]);
 
         if(Auth::attempt(['email'=>$request['email'], 'password' => $request['password']])){
-            return redirect()->route('dashboard');
+                return redirect()->route('timeline');
         }
         return redirect()->back();
 	}

@@ -48,3 +48,45 @@ Route::get('/logout',[
     'uses' => 'UserController@getLogout',
     'as' => 'logout'
 ]);
+
+
+/************Begin Work/****************/
+
+Route::get('/login',[
+    'uses' => 'PageController@getLoginPage',
+    'as' => 'login'
+]);
+
+Route::get('/register',[
+    'uses' => 'PageController@getRegisterPage',
+    'as' => 'register'
+]);
+
+Route::get('/old',[
+    'uses' => 'PageController@getOldPage',
+    'as' => 'old'
+]);
+
+Route::get('/timeline', [
+    'uses' => 'PageController@getTimeline',
+    'as' => 'timeline',
+    'middleware' => 'auth'
+]);
+
+Route::get('/find-friends', [
+    'uses' => 'PageController@getFindFriendsPage',
+    'as' => 'find-friends',
+    'middleware' => 'auth'
+]);
+
+Route::get('/notifications', [
+    'uses' => 'PageController@getNotificationsPage',
+    'as' => 'notifications',
+    'middleware' => 'auth'
+]);
+
+Route::get('/profile', [
+    'uses' => 'PageController@getProfilePage',
+    'as' => 'profile',
+    'middleware' => 'auth'
+]);
