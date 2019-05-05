@@ -39,7 +39,7 @@
                     <a href="#">Forgot your password?</a>
                 </div>
                 <div class="form-group">
-                    <button class="btn btn-primary" type="form-control">Sign In</button>
+                    <button class="btn btn-primary" type="form-control">Sign In</button>						<input type="hidden" name="_token" value="{{Session::token()}}">
                     <input type="hidden" name="_token" value="{{Session::token()}}">
                 </div>
             </form>

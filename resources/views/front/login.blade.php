@@ -6,6 +6,8 @@ Login - Upoint
 <section class="section-sign" data-aos="fade-up">
     <div class="container-fluid">
         <div class="col-lg-6 mx-auto">
+
+            @include('includes.message-block')
             <div class="widget">
                 <h4>Sign In</h4>
                 <div class="card">
@@ -28,8 +30,8 @@ Login - Upoint
                                 <input type="hidden" name="_token" value="{{Session::token()}}">
                             </div>
                             <div class="col-lg-6 p0">
-                                <a href="#">Forget password?</a>
-                                <a href="{{route('register')}}">Don't have an account?</a>
+                                <a class="link" href="#">Forget password?</a>
+                                <a class="link" href="{{route('register')}}">Don't have an account?</a>
                             </div>
                         </div>
                     </form>

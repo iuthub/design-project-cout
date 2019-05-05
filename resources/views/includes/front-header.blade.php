@@ -1,7 +1,7 @@
 <header>
     <nav class="navbar navbar-expand-lg bg-dark ">
         <div class="logo">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="{{route('home')}}">
                 <img src="img/logo.png">
             </a>
         </div>
